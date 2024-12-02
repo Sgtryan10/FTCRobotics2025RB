@@ -25,4 +25,8 @@ public class Drive extends SubsystemBase {
     leftLeader.set(leftSpeed);
     rightLeader.set(rightSpeed);
   }
+
+  private Command drive(double vLeft, double vRight) {
+    return run(() -> drive(vLeft.getAsDouble(), vRight.getAsDouble()));
+  }
 }
